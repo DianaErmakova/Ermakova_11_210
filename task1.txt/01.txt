@@ -1,0 +1,57 @@
+Задача 1
+print('Введите количество чисел')
+k = int(input())
+sum = 0
+while k>0:
+    k -=1
+    print('Введите число')
+    n = int(input())
+    sum += n
+print('Сумма ', sum)
+
+Задача 2
+x = input()
+a = x[::-1]
+s = list(a)
+n = 0
+for i in range(len(a)):
+    if s[i] == '1':
+        n += 2**i 
+print(n)
+
+Задача 3
+s = ['2', '4', '6', '8', '10']
+n = 1
+x = input()
+for i in s:
+    if i == x:
+        print(n)
+    else:
+        n += 1
+
+Задача 4
+s = input().upper()
+a = [0] * 26
+for i in range(len(s)):
+    a[ord(s[i]) - ord('A')] +=1 
+for i in range(len(a)):
+    if a[i] > 0:
+        print(chr(i+65), '=', a[i])
+
+Задача 5
+print("Введите элементы списка. Для завершения введите '0'")
+s = []
+while True:
+    n = input()
+    if n == '0':
+        break
+    s.append(int(n))
+x = 0
+for i in s:
+    count = 0
+    for a in str(i):
+        if int(a) % 2 == 0:
+            count += 1
+    if count == 2:
+        x += 1
+print(x <= 3)
