@@ -1,0 +1,91 @@
+Задача 1
+print('Введите два вещественных числа')
+a = input()
+b = input()
+if a == b:
+    print('Они равны')
+else:
+    print('Они не равны')
+
+Задача 2
+a = input()
+b = input()
+x = float(a)
+y = float(b)
+n = int(input())
+if abs(x) < abs(n) and abs(y) < abs(n):
+    print('попадает')
+else:
+    print('не попадает')
+
+Задача 3
+a = input()
+b = input()
+x = float(a)
+y = float(b)
+n = int(input())
+if (x**2 + y**2) < n**2:
+    print('поадает')
+else:
+    print('не попадает')
+
+Задача 4
+a = input()
+b = input()
+x = float(a)
+y = float(b)
+k = 0
+if (x**2 + y**2) < 10**2:
+    n = x**2 + y**2
+    while k < 100:
+        if n < k**2:
+            print(k)
+            break
+        else:
+            k +=1
+else:
+    print('missed')
+
+Задача 5
+print('Введите число')
+k = int(input())
+print(k, '* 1 =', k*1, ',',k, '* 2 =', k*2, ',', k, '* 3 =', k*3, ',',k, '* 4 =', k*4, ',',k, '* 5 =', k*5, ',',k, '* 6 =', k*6, ',',k, '* 7 =', k*7, ',',k, '* 8 =', k*8, ',',k, '* 9 =', k*9)
+
+Задача 6
+print('Введите целое число')
+n = int(input())
+s = 0
+while n > 0:
+    s += n%10
+    n = n - n%10
+    n = n/10
+print(s)
+
+Задача 7
+print('Введите целое число')
+n = input()
+r = n[::-1]
+print(r)
+
+Задача 8
+x = input()
+a = x[::-1]
+s = list(a)
+n = 0
+for i in range(len(a)):
+    if s[i] == '1':
+        n += 2**i 
+print(n)
+
+Задача 9
+n = int(input())
+s = []
+while n > 0:
+    r = n%2
+    s.append(r)
+    n = n//2
+    if n == 1:
+        s.append(n)
+        break
+s.reverse()
+print("".join(map(str, s)))
