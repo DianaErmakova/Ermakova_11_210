@@ -1,0 +1,38 @@
+Задание 1
+print('Введите количество запросов')
+t = int(input())
+l = []
+while t > 0:
+    n = input()
+    l.append(n)
+    t -= 1
+for i in range(len(l)):
+    print(l[i].strip('0').count('0'))
+
+Задание 2
+print('Введите количество запросов')
+q = int(input())
+w = q
+l = []
+while q > 0: #Ввод данных
+    n = input()
+    l.append(n)
+    q -= 1
+s = []
+for i in range(len(l)): #Разделяем данные пробелом
+    l[i].split( )
+    s.append(l[i].split( ))
+k = []
+for i in range(w): #Делаем более удобный список
+    for j in range(2):
+        k.append(s[i][j])
+l = []
+for i in range(2*w):
+    if k[i] in l:
+        for x in range(len(l)):
+            if l[x] == k[i]:
+                l[(x - 1)%len(l)] = k[(i + 1)%len(k)]
+    else:
+        l.append(k[i])
+l.reverse()
+print(l)
