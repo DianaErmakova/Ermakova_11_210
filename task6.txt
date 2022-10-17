@@ -1,0 +1,60 @@
+Задание 1
+s = '1'
+while s != 'quit':
+    print("Введите сообщение (для завершения введите 'quit')")
+    s = input()
+    if s == 'quit':
+        break
+    s = '1' + s
+    n = ''
+    for i in range(len(s)):
+        if s[i] != s[i-1]:
+            n += s[i]
+        else:
+            k = 1
+            n += str(k)
+    print(n[1:])
+
+Здание 2
+import random
+s = ["Мансур", "Aлим", "Фарида", "Роман", "Анна", "Анастасия", "Мария", "Игорь", "Илья", "Иван", "Алия", "Василий", "Николай", "Пётр", "Валентина"]
+s1 = []
+s2 = []
+s3 = []
+for a in range(20):
+    i = random.randint(0, 14)
+    a = s[i]
+    s1.append(a)
+for a in range(20):
+    i = random.randint(0, 14)
+    a = s[i]
+    s2.append(a)
+for a in range(20):
+    i = random.randint(0, 14)
+    a = s[i]
+    s3.append(a)
+p = []
+n = []
+for i in range(3):
+    if (s1[i] in s2) and (s1[i] in s3):
+        p.append(s1[i])
+for i in range(3):
+    if not(s1[i] in s2) and not(s1[i] in s3):
+        n.append(s1[i])
+for i in range(3):
+    if not(s2[i] in s1) and not(s2[i] in s3):
+        n.append(s2[i])
+for i in range(3):
+    if not(s3[i] in s1) and not(s3[i] in s2):
+        n.append(s3[i])
+print("Список1", s1)
+print("Список2", s2)
+print("Список3", s3)
+if len(p) == 0:
+    print("Нет студентов, у которых есть тёзки в каждой группе")
+else:
+    print(p, "Есть тёзки в каждой группе")
+if len(n) == 0:
+    print("Нет студентов, у которых нет тёзок ни в одной группе")
+else:
+    print(n, "Нет тёзок ни в одной группе")
