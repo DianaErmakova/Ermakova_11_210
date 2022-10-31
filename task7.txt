@@ -1,0 +1,27 @@
+Задание 1
+
+import re
+w = input()
+m = input()
+r = re.search(w, m, flags=re.IGNORECASE).start()
+print(r)
+
+Задание 2
+
+import re
+s = []
+print('Заполните список, для остановки введите stop')
+while True:
+    n = input()
+    if n == 'stop':
+        break
+    s.append(n)
+female = []
+male = []
+for i in s:
+    if re.findall(r'ов$', i) or re.findall(r'ев$', i) or re.findall(r'ин$', i) or re.findall(r'ын$', i) or re.findall(r'ский$', i) or re.findall(r'цкий$', i):
+        male.append(i)
+    elif re.findall(r'ова$', i) or re.findall(r'ева$', i) or re.findall(r'ина$', i) or re.findall(r'ына$', i) or re.findall(r'ская$', i) or re.findall(r'цкая$', i):
+        female.append(i)
+print('Женщин:', len(female))
+print('Мужчин:', len(male))
