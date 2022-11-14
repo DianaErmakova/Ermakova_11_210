@@ -1,0 +1,13 @@
+Задание 1
+from functools import reduce
+lst = [1, -1, -2, 2, -3, 3, 4]
+f = list(filter(lambda item: item > 0, lst))
+r = reduce(lambda a,b: a*b, f)
+print(r)
+
+Задание 2
+print('Введите a и k')
+a = int(input())
+k = int(input())
+r = a >> k
+print(r)
