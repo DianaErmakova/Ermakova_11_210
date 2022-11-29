@@ -1,0 +1,46 @@
+class A:
+    def __init__(self, name, group, physics, math):
+        print('init', name)
+        self.name = name
+        self.group = group
+        self.physics = physics
+        self.math = math
+    def introduce(self):
+        print(f"Hi, I am {self.name}")
+    def physicsgrade(self):
+        print(f'My physics is {self.physics}')
+    def mathgrade(self):
+        print(f'My math is {self.math}')
+class B(A):
+    def __init__(self, name, group, phisics, math, biology, chemistry):
+        super().__init__(name, group, phisics, math)
+        self.biology = biology
+        self.chechemistrymistry = chemistry
+    def introduce(self):
+        print(f"Hi, I am {self.name}")
+    def biologygrade(self):
+        print(f'My biology is {self.biology}')
+    def chemistrygrade(self):
+        print(f'My chemistry is {self.chemistry}')
+class C(B):
+    def __init__(self, name, group, phisics, math, biology, chemistry, english, literature):
+        super().__init__(name, group, phisics, math, biology, chemistry)
+        self.english = english
+        self.literature = literature
+    def introduce(self):
+        print(f"Hi, I am {self.name}")
+    def englishgrade(self):
+        print(f'My english is {self.english}')
+    def literaturegrade(self):
+        print(f'My literature is {self.literature}')
+a = A('Kate', 'class A', '5,0', '5,0')
+b = B('Mark', 'clsass B', '4,0', '4,0', '4,0', '4,0')
+c = C('Rose', 'class C', '3,0', '3,0', '3,0', '3,0', '3,0', '3,0')
+print('Children, say hi')
+a.introduce()
+b.introduce()
+c.introduce()
+print('Children, that your favorite subject and that your grade?')
+a.physicsgrade()
+b.biologygrade()
+c.englishgrade()
